@@ -1,10 +1,17 @@
 """Take a decimal integer and a number of bits and convert to unsigned binary representation."""
 
-def main():
-    bits = decimal_to_binary(55, 16)  # implicit definition (thanks Python)
-    print(bits)
+DEBUG_DEC = 0
+DEBUG_BITS = 12
 
-def decimal_to_binary(dec: int, N: int = 16):
+# NOTE: for some reason 170 does not work. The issue may be with the sconvert function but it's likely the algorithm
+
+
+def main():
+    bits = decimal_to_binary(DEBUG_DEC, DEBUG_BITS)  # implicit definition (thanks Python)
+    bits_str = convert_to_string(bits)
+    print(bits_str)
+
+def decimal_to_binary(dec: int, N: int):
     """Converts decimal integer to unsigned binary string"""
 
     # take dec, use algorithm to display as a string of 1's and 0's in 16-bit binary
@@ -33,7 +40,17 @@ def decimal_to_binary(dec: int, N: int = 16):
         i -= 1
     
     return bits
-    
 
+def convert_to_string(char_list) -> str:
+    """Takes in a list of chars and converts to a string."""
+
+    return_str: str = ''
+
+    for char in char_list:
+        return_str = return_str + str(char)
+
+    return return_str
+
+    
 if __name__ == "__main__":
     main()
