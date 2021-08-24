@@ -1,0 +1,1 @@
+"""Take a string and parse it into an array of ints, then read it and convert to a decimal."""

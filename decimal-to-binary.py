@@ -1,4 +1,4 @@
-"""Note: I made a similar project in COMP 211 in C (yes, the original C). This project is a newer, more Python-y version."""
+"""Take a decimal integer and a number of bits and convert to unsigned binary representation."""
 
 def main():
     bits = decimal_to_binary(55, 16)  # implicit definition (thanks Python)
