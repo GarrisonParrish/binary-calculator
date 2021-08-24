@@ -1,10 +1,11 @@
 """Note: I made a similar project in COMP 211 in C (yes, the original C). This project is a newer, more Python-y version."""
 
 def main():
-    decimal_to_binary(500000, 16)
+    bits = decimal_to_binary(55, 16)  # implicit definition (thanks Python)
+    print(bits)
 
-def decimal_to_binary(dec: int, N: int = 16) -> str:
-    """Converts decimal integer to binary string"""
+def decimal_to_binary(dec: int, N: int = 16):
+    """Converts decimal integer to unsigned binary string"""
 
     # take dec, use algorithm to display as a string of 1's and 0's in 16-bit binary
 
@@ -30,8 +31,8 @@ def decimal_to_binary(dec: int, N: int = 16) -> str:
         bits[i] = dec_copy % 2
         dec_copy = dec_copy // 2  # floor division
         i -= 1
-
-    print(bits)
+    
+    return bits
     
 
 if __name__ == "__main__":
