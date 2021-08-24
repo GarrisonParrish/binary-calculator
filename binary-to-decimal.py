@@ -1,9 +1,6 @@
 """Take a string and parse it into an array of ints, then read it and convert to a decimal."""
 
-DEBUG_BIN = "0"
-
-# NOTE: The same issue exists here: it will not convert 0 0011 0101 -> 170 correctly. It says it's 53.
-# It's fine with 0110 0000 0000 -> 1536 though.
+DEBUG_BIN = "10101010"
 
 def main():
     # Nothing yet

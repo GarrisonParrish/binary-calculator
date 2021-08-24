@@ -1,6 +1,6 @@
 """Take a decimal integer and a number of bits and convert to unsigned binary representation."""
 
-DEBUG_DEC = 0
+DEBUG_DEC = 170  # 10101010
 DEBUG_BITS = 12
 
 # NOTE: for some reason 170 does not work. The issue may be with the sconvert function but it's likely the algorithm
