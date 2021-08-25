@@ -7,4 +7,5 @@ and I wanted to have an easy way to check my understanding.
 - A signed representation calculator
 - One's complement (yes I know it's useless)
 - Two's complement (Very much not useless)
+- Floating point (IEEE 754)
 - A GUI
