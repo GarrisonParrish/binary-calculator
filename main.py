@@ -19,14 +19,19 @@ def main():
     twos_compl_bin = bin_to_twos_compl(unsigned_bin)
     print(list_to_string(twos_compl_bin, ' ', 4))
 
-    """
-    bits = dec_to_bin(POS_DEC, DEBUG_BITS)  # implicit definition (thanks Python)
-    bits_str = list_to_string(bits)
-    print(bits_str)
-    # Nothing yet
-    dec_result = bin_to_dec(DEBUG_BIN)
-    print(dec_result)
-    """
+    # Convert both the unsigned binary and the twos complement respresentations back to decimal
+
+    # Unsigned:
+    unsigned_dec: int = bin_to_dec(unsigned_bin)
+    print(unsigned_dec)
+
+    # Twos compl:
+    # NOTE: expect this to be incorrect in its current form. Will need special functionality for twos complement conversions.
+    twos_dec: int = bin_to_dec(twos_compl_bin)
+    print(twos_compl_bin)
+
+    # NOTE: Need to throw exceptions for invalid cases. It's hard to tell where thinngs are going wrong.
+
 
 if __name__ == "__main__":
     main()
