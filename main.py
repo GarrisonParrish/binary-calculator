@@ -5,15 +5,19 @@ from binary_conversions import *
 from list_to_string import *
 
 DEBUG_BIN = "10101010"
-POS_DEC = 13
+POS_DEC = 1
 NEG_DEC = -7
 DEBUG_BITS = 12
 
 
 def main():
     # Convert a positive decimal number to binary unsigned
-    unsigned_bin = dec_to_bin(POS_DEC)  # the lask of a designated type is really bugging me
+    unsigned_bin = dec_to_bin(POS_DEC, DEBUG_BITS)  # the lask of a designated type is really bugging me
     print(list_to_string(unsigned_bin, ' ', 4))
+
+    # Convert the positive decimal to a negative twos complement representation
+    twos_compl_bin = bin_to_twos_compl(unsigned_bin)
+    print(list_to_string(twos_compl_bin, ' ', 4))
 
     """
     bits = dec_to_bin(POS_DEC, DEBUG_BITS)  # implicit definition (thanks Python)

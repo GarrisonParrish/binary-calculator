@@ -57,12 +57,13 @@ def bin_to_ones_compl(bin, neg: bool):
 
 def bin_to_twos_compl(bin):
     """Converts binary (as array) to twos complement negative."""
-    for bit in range(0, len(bin)):
-        # Flip the bits
-        if bin[bit] == 1:
+    one_flag: bool = False
+    for bit in range(len(bin)-1, -1, -1):
+        # Reading from the right, flip all the bits except for the first 1 encountered
+        if bin[bit] == 1 and one_flag == False:
+            one_flag = True
+        elif bin[bit] == 1:
             bin[bit] = 0
         else:
             bin[bit] = 1
-
-    # Add 1
     return bin
