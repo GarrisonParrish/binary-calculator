@@ -1,14 +1,7 @@
 """Take a string and parse it into an array of ints, then read it and convert to a decimal."""
 
-DEBUG_BIN = "10101010"
 
-def main():
-    # Nothing yet
-    dec_result = binary_to_decimal(DEBUG_BIN)
-    print(dec_result)
-
-
-def binary_to_decimal(bin: str) -> int:
+def bin_to_dec(bin: str) -> int:
     """Convert binary string to decimal integer."""
     bin_len: int = len(bin)
 
@@ -31,6 +24,3 @@ def binary_to_decimal(bin: str) -> int:
         j += 1
 
     return dec_result
-
-if __name__ == "__main__":
-    main()

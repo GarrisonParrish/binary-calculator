@@ -1,17 +1,7 @@
-from decimal_to_binary import *
+from dec_to_bin import *
 
 
 """Convert an unsigned binary number to one's complement representation."""
-
-DEC = -30
-
-def main():
-    #bin = decimal_to_binary(DEC, 16)
-    #ones_bin = bin_to_ones_compl(bin, True)
-    #print(ones_bin)
-    ones_comp_bin = dec_to_ones_compl(DEC)
-    str_ones_comp_bin: str = list_to_string(ones_comp_bin, ' ', 4)
-    print(str_ones_comp_bin)
 
 
 def bin_to_signed(bin, neg: bool):
@@ -42,7 +32,7 @@ def bin_to_ones_compl(bin, neg: bool):
     # If neg is true (leading bit is 1) then flip the bits
     # If there aren't enough bits, return an error
 
-    # Maybe we should take in an array instead of a string
+    # Maybe we should take in an array instead of a strings
     # bin is a list of 1's and 0'ss
 
     if neg == True:
@@ -73,7 +63,4 @@ def dec_to_ones_compl(dec):
         neg = True
         dec = abs(dec)
     
-    return bin_to_ones_compl(decimal_to_binary(dec, 8), neg)
-
-if __name__ == '__main__':
-    main()
+    return bin_to_ones_compl(dec_to_bin(dec, 8), neg)
