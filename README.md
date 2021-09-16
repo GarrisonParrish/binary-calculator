@@ -16,4 +16,4 @@ and I wanted to have an easy way to check my understanding.
 - https://www.exploringbinary.com/twos-complement-converter/
 
 #### Update:
-I now have the twos complement conversion working! It only took a few minor tweaks. Now I will srtart working on a simple GUI to make it neat. The plan is also to eventually package this program so it can be distributed.
+I now have the twos complement conversion working! It only took a few minor tweaks. Now I will start working on a simple GUI to make it neat. The plan is also to eventually package this program so it can be distributed.
