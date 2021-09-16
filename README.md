@@ -9,3 +9,7 @@ and I wanted to have an easy way to check my understanding.
 - Two's complement (Very much not useless)
 - Floating point (IEEE 754)
 - A GUI
+
+### References:
+- https://www.calculator.net/binary-calculator.html?b2dnumber1=10101010&calctype=b2d&x=63&y=17#binary2decimal
+- https://www.omnicalculator.com/math/ones-complement
