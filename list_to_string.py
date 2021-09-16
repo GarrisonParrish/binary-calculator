@@ -10,11 +10,5 @@ def list_to_string(char_list, delimiter: str = '', interval: int = 1) -> str:
         if i != 0 and i % interval == 0:
             return_str = delimiter + return_str
         i -= 1
-    """
-    for char in char_list:
-        return_str = return_str + str(char)
-        if i % interval == 0:
-            return_str = return_str + delimiter
-        i += 1
-    """
+
     return return_str
