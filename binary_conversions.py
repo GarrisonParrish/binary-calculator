@@ -1,7 +1,7 @@
 """Handle conversions from binary (as lists) to other forms."""
 
 
-def bin_to_dec(bin: str) -> int:
+def bin_to_dec(bin) -> int:
     """Convert binary number (as list) to decimal integer."""
     # Take string and parse it from right to left into an array of ints
     # All extra ints are left as 0's (do I need this step?)
@@ -12,10 +12,7 @@ def bin_to_dec(bin: str) -> int:
     dec_result: int = 0
     j: int = 0  # counter for exponents (there has to be a better way to do this)
     for i in range(len(bin)-1, -1, -1):
-        if bin[i] != '1' and bin[i] != '0':
-            print("Invalid bit string: must contain only 1's or 0's")
-            return -1  # NOTE: may need to find a better way to handle this error
-        if bin[i] == '1':
+        if bin[i] == 1:
             dec_result += 2**j
         j += 1
 
@@ -37,7 +34,7 @@ def bin_to_signed(bin, neg: bool):
         if bin[0] == 0:
             bin[0] = 1
         else:
-            print("Not enough bits to represent in one's complement binary.")
+            raise Exception("Not enough bits to represent in one's complement binary.")
             return
     return bin
 

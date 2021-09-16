@@ -7,12 +7,12 @@ from list_to_string import *
 DEBUG_BIN = "10101010"
 POS_DEC = 1
 NEG_DEC = -7
-DEBUG_BITS = 12
+DEBUG_BITS = 8
 
 
 def main():
     # Convert a positive decimal number to binary unsigned
-    unsigned_bin = dec_to_bin(POS_DEC)  # the lask of a designated type is really bugging me
+    unsigned_bin = dec_to_bin(POS_DEC, DEBUG_BITS)  # the lask of a designated type is really bugging me
     print(list_to_string(unsigned_bin, ' ', 4))
 
     # Convert the positive decimal to a negative twos complement representation
@@ -23,6 +23,7 @@ def main():
 
     # Unsigned:
     unsigned_dec: int = bin_to_dec(unsigned_bin)
+    # NOTE: somehow unsigned_bin is always a list of 1's, no matter the input. May have something to do with the lack of a type
     print(unsigned_dec)
 
     # Twos compl:
