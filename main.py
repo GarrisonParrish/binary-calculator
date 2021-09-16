@@ -12,7 +12,7 @@ DEBUG_BITS = 12
 
 def main():
     # Convert a positive decimal number to binary unsigned
-    unsigned_bin = dec_to_bin(POS_DEC, DEBUG_BITS)  # the lask of a designated type is really bugging me
+    unsigned_bin = dec_to_bin(POS_DEC)  # the lask of a designated type is really bugging me
     print(list_to_string(unsigned_bin, ' ', 4))
 
     # Convert the positive decimal to a negative twos complement representation
@@ -28,9 +28,9 @@ def main():
     # Twos compl:
     # NOTE: expect this to be incorrect in its current form. Will need special functionality for twos complement conversions.
     twos_dec: int = bin_to_dec(twos_compl_bin)
-    print(twos_compl_bin)
+    print(twos_dec)
 
-    # NOTE: Need to throw exceptions for invalid cases. It's hard to tell where thinngs are going wrong.
+    # NOTE: Need to throw exceptions for invalid cases. It's hard to tell where things are going wrong.
 
 
 if __name__ == "__main__":
